@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <h1><span><i class="fa-solid fa-a"></i></span>khil
+                </h1>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Expertise</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Frontend Developer</p>
+                <h2>Hi, I'm <span>Akhil</span> from India
+                </h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- ------ About section -->
+    <section>
+        <div id="about">
+          <div class="container">
+            <div class="about-user-col">
+                <img src="images/about.png" alt="user">
+            </div>
+            <div class="about-user-desc">
+                <h2 class="titleCard">About Me</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit esse totam pariatur voluptas, aut qui consequatur impedit nostrum harum minus facilis illum obcaecati omnis deleniti ab error? Aspernatur, qui doloremque.</p>
+                <div class="tab-title">
+                    <p class="tab-links active-link" data-tab='Skills'>Skills</p>
+                    <p class="tab-links" data-tab='Experience'>Experience</p>
+                    <p class="tab-links" data-tab='Education'>Education</p>
+                </div>
+                <div class="tab-content active-tab" id="Skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Figma based User interfaces</li>
+                        <li><span>Web Development</span> <br>Web application Development using HTML, CSS, JS.</li>
+                        <li><span>AWS</span><br>Build, Deploy & Manage web applications in Cloud Services.</li>
+                    </ul>
+                </div>
+
+                <div class="tab-content" id="Experience">
+                    <ul>
+                        <li><span>2021-2022</span><br>SAP Hana Developer</li>
+                        <li><span>2022-2023</span> <br>Freelancer</li>
+                        <li><span>2023-current</span><br>Frontend Developer</li>
+                    </ul>
+                </div>
+
+                <div class="tab-content" id="Education">
+                    <ul>
+                        <li><span>2020</span><br>SAP Basis & Hana Training</li>
+                        <li><span>2017</span> <br>BTech(EEE) from JNTU Anantapur</li>
+                    </ul>
+                </div>
+
+            </div>
+          </div>
+        </div>
+    </section>
+    
+    
+
+    <script src="script.js"></script>
+   </body>
+</html>

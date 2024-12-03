@@ -1,3 +1,10 @@
+:root{
+    --text-red-900: #ff0000;
+    --color-grey: #5c5e5d;
+    --color-lemon-green: #ff0000;
+    --color-darkgrey: #959c97
+}
+
 *{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -27,6 +34,7 @@ nav{
 }
 nav h1{
     width: 150px;
+    font-size: 30px;
     margin-right: 120px;
 }
 nav h1 span{
@@ -38,7 +46,8 @@ nav ul li{
     margin: 10px 25px;
 }
 nav ul li a{
-    color: white;
+    color: rgb(240, 238, 238);
+    font-size: 20px;
     text-decoration: none;
     position: relative;
 }
@@ -111,7 +120,7 @@ section img{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #ff0000;
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -126,11 +135,63 @@ section img{
 }
 .tab-content ul li span{
     font-size: 16px;
-    color: #ff004f;
+    color: hwb(0 0% 0%);
 }
 .tab-content{
     display: none;
 }
 .tab-content.active-tab{
     display: block;
+}
+
+/* ---------------- Services -------------- */
+#services{
+    padding: 40px 0;
+}
+.services-list{
+    display: flex;
+
+    /* grid-template-columns: repeat((auto-fit, minmax(250px, 1fr)));
+    grid-gap: 40px;
+    margin-top: 50px; */
+
+}
+.skill-Item{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+.skill-Item h3{
+    line-height: 40px;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--text-red-900);
+    text-transform: capitalize;
+}
+.skill-Item .progress{
+    position: relative;
+    background-color: var(--color-grey);
+    height: 8px;
+    border-radius: 5px;
+    width: 100%;
+
+}
+.skill-Item .progress-percent{
+    background-color: var(--color-lemon-green);
+    height: 100%;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    
+
+}
+
+.skill-Item .skill-percent{
+    color: var(--color-darkgrey);
+    position: absolute;
+    right: 0;
+    top: -22px;
+    font-weight: 400;
+    line-height: 20px;
 }

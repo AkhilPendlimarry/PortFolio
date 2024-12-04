@@ -17,3 +17,13 @@ function openTab(tabName, element){
     element.classList.add("active-link");
     document.getElementById(tabName).classList.add('active-tab');
 }
+
+document.addEventListener("DOMContentLoaded", function(){
+    const projectLink = document.getElementById('project-link');
+
+    const projectURL = "https://techshop-five.vercel.app/";
+    projectLink.addEventListener('click', function(event){
+        event.preventDefault();
+        window.open(projectURL,"_blank");
+    });
+});

@@ -19,11 +19,43 @@ function openTab(tabName, element){
 }
 
 document.addEventListener("DOMContentLoaded", function(){
-    const projectLink = document.getElementById('project-link');
+    const projectLinks = document.querySelectorAll('.project-link');
 
-    const projectURL = "https://techshop-five.vercel.app/";
-    projectLink.addEventListener('click', function(event){
-        event.preventDefault();
-        window.open(projectURL,"_blank");
+    projectLinks.forEach(link => {
+        link.addEventListener('click', function(event){
+            event.preventDefault();
+            const projectURL = link.getAttribute('data-url'); // gets the url from the attribute
+            window.open(projectURL,"_blank");
+
+        });
+   
+    });
+});
+
+let sideMenu = document.getElementById("sidemenu");
+function openmenu(){
+    sideMenu.style.right = '0';
+}
+function closemenu(){
+    sideMenu.style.right = '-200px';
+}
+
+// Gets the button element
+const goToTopBtn = document.getElementById('goToTopBtn');
+
+// Show or hide the button based on scroll position
+window.addEventListener('scroll', function () {
+    if (window.scrollY > 300) { // Shows when scrolled down 300px
+        goToTopBtn.style.display = 'block';
+    } else {
+        goToTopBtn.style.display = 'none';
+    }
+});
+
+// Scroll to top when the button is clicked
+goToTopBtn.addEventListener('click', function () {
+    window.scrollTo({
+        top: 0, 
+        behavior: 'smooth' // Smooth scroll to top
     });
 });

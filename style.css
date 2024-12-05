@@ -15,6 +15,9 @@ body{
     background: #000000;
     color: #fff;
 }
+html{
+    scroll-behavior: smooth;
+}
 header{
     width: 80%;
     height: 900px;
@@ -40,9 +43,15 @@ nav h1{
 nav h1 span{
     color: #57f608;
 }
-nav ul li{
-    display: inline-block;
+nav ul{
+    display: flex;
+    margin-left: 200px;
+    padding: 0;
     list-style: none;
+}
+nav ul li{
+    /* display: inline-block;
+    list-style: none; */
     margin: 10px 25px;
 }
 nav ul li a{
@@ -197,7 +206,8 @@ section img{
     flex-wrap: wrap;
     gap: 40px;
     margin: 30px;
-    position: relative;    
+    position: relative;  
+    overflow: hidden;  
 }
 .projectList{
     width: 450px;
@@ -268,4 +278,158 @@ section img{
 }
 .btn:hover{
     background-color: #d406fd;
+}
+
+/* ------- Contact section --------- */
+
+.contact-left{
+    flex-basis: 40%;
+}
+.contact-right{
+    flex-basis: 55%;
+}
+.contact-left p {
+    margin:20px 0px;
+}
+.contact-left p i{
+    color: #f8f6f8;
+    padding: 5px;
+    font-size: 20px;
+}
+.social-icons{
+    margin-top: 25px;
+}
+.social-icons a{
+    color: white;
+    margin-right: 15px;
+    font-size: 25px;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff0000;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: rgb(247, 2, 243);
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 2px;
+    outline: none;
+    background: #2c2c2c;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+}
+form .btn2{
+    padding: 14px 16px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: 400;
+    margin-top: 20px;
+    background: #262626;
+}
+.copyright i{
+    color: #fa00f6;
+    font-weight: 500;
+}
+
+
+/* --------- Small Screen layout ----- */
+nav .fa-xmark{
+    display: none;
+}
+nav .fa-bars{
+    display: none;
+}
+
+/* Go to Top Button */
+#goToTopBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 60px; 
+    right: 20px; 
+    z-index: 99; 
+    font-size: 18px;
+    background-color: #ff00f2; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+    transition: opacity 0.3s ease-in-out; 
+}
+
+
+@media only screen and (max-width: 600px){
+    header{
+        background-image: url(images/akhil_pendlimarry_photo.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h2{
+        font-size: 30px;
+    }
+    nav .fa-xmark, nav .fa-bars{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition:  right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-xmark{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .titleCard{
+        font-size: 30px;
+    }
+    .about-user-col, .about-user-desc{
+        flex-basis: 100%;
+    }
+    .about-user-col{
+        margin-bottom: 30px;
+    }
+    .about-user-desc{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-right{
+        flex-basis: 100%;
+    }
 }
